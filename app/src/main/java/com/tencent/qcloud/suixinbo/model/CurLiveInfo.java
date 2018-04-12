@@ -1,6 +1,5 @@
 package com.tencent.qcloud.suixinbo.model;
 
-
 import com.tencent.qcloud.suixinbo.utils.Constants;
 
 /**

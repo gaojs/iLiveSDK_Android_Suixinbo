@@ -69,7 +69,6 @@ public class RoomInfoJson {
         }
 
 
-
         @Override
         public String toString() {
             return "HOST{" +
@@ -120,8 +119,6 @@ public class RoomInfoJson {
                 ", lbs=" + lbs +
                 '}';
     }
-
-
 
 
 }

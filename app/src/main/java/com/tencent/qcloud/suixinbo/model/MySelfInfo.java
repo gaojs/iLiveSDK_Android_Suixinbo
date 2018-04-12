@@ -33,10 +33,7 @@ public class MySelfInfo {
     private SxbLog.SxbLogLevel logLevel;           // 日志等级
     private int beautyType;     // 美颜类型 0: 内置美颜  1: 插件美颜
     private String guestRole = "";           // 观看质量
-
-
     private int id_status;
-
     private int myRoomNum = -1;
 
     private static MySelfInfo ourInstance = new MySelfInfo();
@@ -156,7 +153,7 @@ public class MySelfInfo {
         SharedPreferences sharedata = context.getSharedPreferences(Constants.USER_INFO, 0);
         id = sharedata.getString(Constants.USER_ID, null);
         userSig = sharedata.getString(Constants.USER_SIG, null);
-        token = sharedata.getString(Constants.USER_TOKEN,null);
+        token = sharedata.getString(Constants.USER_TOKEN, null);
         myRoomNum = sharedata.getInt(Constants.USER_ROOM_NUM, -1);
         nickName = sharedata.getString(Constants.USER_NICK, null);
         avatar = sharedata.getString(Constants.USER_AVATAR, null);

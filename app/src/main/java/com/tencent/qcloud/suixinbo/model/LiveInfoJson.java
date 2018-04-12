@@ -15,8 +15,6 @@ public class LiveInfoJson {
     private int timeSpan;
     private int watchCount;
 
-
-
     public int getAvRoomId() {
         return avRoomId;
     }
@@ -24,7 +22,6 @@ public class LiveInfoJson {
     public void setAvRoomId(int avRoomId) {
         this.avRoomId = avRoomId;
     }
-
 
     public String getCover() {
         return cover;
@@ -111,7 +108,6 @@ public class LiveInfoJson {
         private String avatar;
         private String username;
 
-
         public String getUid() {
             return uid;
         }
@@ -137,5 +133,4 @@ public class LiveInfoJson {
                     '}';
         }
     }
-
 }

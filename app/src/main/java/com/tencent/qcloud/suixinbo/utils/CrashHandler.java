@@ -2,15 +2,11 @@ package com.tencent.qcloud.suixinbo.utils;
 
 import android.content.Context;
 
-
 /**
  * 异常处理
  */
 public class CrashHandler implements Thread.UncaughtExceptionHandler {
-
-
     private static CrashHandler sInstance = new CrashHandler();
-
     //系统默认的异常处理（默认情况下，系统会终止当前的异常程序）
     private Thread.UncaughtExceptionHandler mDefaultCrashHandler;
 
@@ -34,7 +30,6 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         mContext = context.getApplicationContext();
     }
 
-
     /**
      * 当程序中有未被捕获的异常，系统将会自动调用#uncaughtException方法
      * thread为出现未捕获异常的线程，ex为未捕获的异常，有了这个ex，我们就可以得到异常信息。
@@ -48,6 +43,5 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         } else {
             android.os.Process.killProcess(android.os.Process.myPid());
         }
-
     }
 }

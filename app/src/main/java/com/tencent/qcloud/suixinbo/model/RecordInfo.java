@@ -22,22 +22,22 @@ public class RecordInfo {
     private String playUrl;         // playurl 播放地址
     private String strSize;         // 文件大小
     private String strDuration;       // 录制时长
-    private String strFaceUrl="";      // 头像
+    private String strFaceUrl = "";      // 头像
 
-    public RecordInfo(JSONObject jsonRecord) throws JSONException{
+    public RecordInfo(JSONObject jsonRecord) throws JSONException {
         strUser = jsonRecord.optString("uid");
         strCover = jsonRecord.optString("cover");
         strVideoId = jsonRecord.optString("videoId");
         JSONArray urls = jsonRecord.getJSONArray("playurl");
-        if (null != urls && urls.length()>0){
+        if (null != urls && urls.length() > 0) {
             playUrl = urls.getString(0);
         }
         strName = jsonRecord.optString("name");
         long uSec = jsonRecord.optLong("createTime", 0);
-        if (0 != uSec){
+        if (0 != uSec) {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            strCreateTime = formatter.format(new Date(uSec*1000));
-        }else {
+            strCreateTime = formatter.format(new Date(uSec * 1000));
+        } else {
             String info[] = strName.split("_");
             if ("sxb".equals(info[0])) {     //手动录制
                 strName = info[2];
